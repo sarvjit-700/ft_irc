@@ -1,8 +1,9 @@
+<img width="1024" height="572" alt="image" src="https://github.com/user-attachments/assets/89fbe29d-e2cd-40f3-bf99-4a6508e1c9e3" />
+
 *This project has been created as part of the 42 curriculum by mklimuk, msimek, ssukhija.*
 
 # DESCRIPTION
-The project is about creating IRC server using c++98. The server accepts connections from clients over TCP/IP protocol. Multiple users can connect simultaneously through channels and private messages. 
-If previous projects requires forking a process or creating threads, server uses a loop that checks all clients at once with one call to poll. This call tells the server which clients are ready to be read or written so it can handle accepting new connections, reading messages, sending responses.
+This project involves building a fully functional Internet Relay Chat (IRC) server from scratch using standard C++98. It handles simultaneous multi-client connections over TCP/IP, supporting core IRC features like channel management and private messaging. Instead of relying on traditional multi-threading or process forking, the architecture achieves concurrency through a single-threaded event loop utilizing I/O multiplexing with the poll() system call. This approach allows the server to efficiently monitor all connected sockets at once—dynamically handling new connections, reading incoming data, and dispatching responses exactly when clients are ready.
 
 Avaliable commands:
 * PASS - enter the server's password
